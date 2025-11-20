@@ -1,16 +1,18 @@
 .elhp-google-btn {
-    display:flex;
-    align-items:center;
-    gap:8px;
-    border:1px solid #ddd;
-    padding:10px 14px;
-    border-radius:6px;
-    text-decoration:none;
-    width:100%;
-    box-sizing:border-box;
-    background:#fff;
-    font-weight:600;
-    color:#222;
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
-.elhp-google-btn:hover { background:#f7f7f7; }
-.elhp-g-icon { width:18px; height:auto; }
+
+.elhp-google-btn:hover {
+    background: #f7f7f7;
+}
