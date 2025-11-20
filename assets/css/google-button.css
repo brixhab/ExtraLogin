@@ -1,0 +1,23 @@
+.elhp-google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.elhp-google-btn:hover {
+    background: #f7f7f7;
+}
+
+.elhp-g-icon {
+    width: 18px;
+}
