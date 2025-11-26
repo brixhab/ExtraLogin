@@ -13,8 +13,8 @@ defined( 'ABSPATH' ) || exit;
 return [
 	'extralogin-authentication' => [
 		'handle'  => 'extralogin-authentication',
-		'src'     => hivepress()->get_url( 'authentication' ) . '/assets/js/common.min.js',
-		'version' => hivepress()->get_version( 'authentication' ),
+		'src'     => plugin_dir_url( __FILE__ ) . '../../assets/js/common.min.js',
+		'version' => '1.0.0',
 		'deps'    => [ 'hivepress-core' ],
 		'data'    => [
 			'apiURL' => hivepress()->router->get_url(
