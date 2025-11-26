@@ -16,25 +16,13 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Define plugin constants.
-define( 'EXTRALOGIN_VERSION', '1.0.0' );
-define( 'EXTRALOGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'EXTRALOGIN_URL', plugin_dir_url( __FILE__ ) );
-
-// Register extension directory with HivePress.
-add_filter(
-	'hivepress/v1/extensions',
-	function( $extensions ) {
-		$extensions[] = __DIR__;
-		return $extensions;
-	}
-);
-
-// Check if HivePress is active.
+// Check if HivePress is active before doing anything.
 add_action(
 	'plugins_loaded',
 	function() {
+		// Check if HivePress exists.
 		if ( ! function_exists( 'hivepress' ) ) {
+			// Show admin notice if HivePress is not active.
 			add_action(
 				'admin_notices',
 				function() {
@@ -55,6 +43,18 @@ add_action(
 					<?php
 				}
 			);
+			
+			return;
 		}
-	}
+
+		// Register extension directory with HivePress.
+		add_filter(
+			'hivepress/v1/extensions',
+			function( $extensions ) {
+				$extensions['extralogin'] = __DIR__;
+				return $extensions;
+			}
+		);
+	},
+	9
 );
