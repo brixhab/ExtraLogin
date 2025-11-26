@@ -30,6 +30,7 @@ return [
 			],
 		],
 	],
+	
 	'integrations' => [
 		'sections' => [
 			'google'   => [
@@ -42,6 +43,7 @@ return [
 					],
 				],
 			],
+	
 			'facebook' => [
 				'title'  => 'Facebook',
 				'_order' => 100,
